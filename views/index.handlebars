@@ -1,0 +1,27 @@
+<div>
+    <h1>Eat-That-Burger</h1>
+    <input type="text" id="bg" name="name">
+    <button id="submit">Submit</button>
+    <div class="burger-section">
+        <div class="left">
+            {{#each data}}
+            {{#unless this.devoured}}
+            <div class="burger">
+                <span>{{this.burger_name}}</span>
+                <button type="submit">devoured</button>
+            </div>
+            {{/unless}}
+            {{/each}}
+        </div>
+
+        <div class="rigth">
+            {{#each data}}
+            {{#if this.devoured}}
+            <div class="burger">
+                <span>{{this.burger_name}}</span>
+            </div>
+            {{/if}}
+            {{/each}}
+        </div>
+    </div>
+</div>

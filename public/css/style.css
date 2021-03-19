@@ -1,0 +1,20 @@
+.burger-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 15px;
+};
+
+.left, .rigth{
+    display: flex;
+    flex-direction: column;
+};
+
+.burger{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: 15px;
+}
