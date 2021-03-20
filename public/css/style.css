@@ -1,3 +1,9 @@
+/* body {
+    width: 99%;
+    height: 900px;
+    background-color: #fc6;
+}; */
+
 .burger-section{
     display: flex;
     flex-direction: row;
@@ -17,4 +23,9 @@
     justify-content: flex-start;
     flex-wrap: wrap;
     margin: 15px;
+};
+
+.main-contain{
+    max-width: 900px;
+    margin: auto;
 }

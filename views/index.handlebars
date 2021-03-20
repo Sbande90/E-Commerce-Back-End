@@ -1,14 +1,22 @@
-<div>
-    <h1>Eat-That-Burger</h1>
-    <input type="text" id="bg" name="name">
+<div style="max-width: 900px;
+    margin: auto;">
+    <img src="/public/img/burger.png" alt="burger" style="margin-left: 50%;
+    transform: translateX(-50%);"/>
+    <h1 style="width:100%; text-align:center">Eat-That-Burger</h1>
+    {{!-- <input type="text" id="bg" name="name">
     <button id="submit">Submit</button>
-    <div class="burger-section">
+    <p>Enter a burger you want to eat Click the "Submit" button.</p> --}}
+    <div style="display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 15px;">
         <div class="left">
             {{#each data}}
             {{#unless this.devoured}}
-            <div class="burger">
+            <div style="margin: 7px;">
                 <span>{{this.burger_name}}</span>
-                <button type="submit">devoured</button>
+                <button type="submit"> <a href="/api/devoure/{{this.id}}">devoured</a></button>
             </div>
             {{/unless}}
             {{/each}}
@@ -17,11 +25,16 @@
         <div class="rigth">
             {{#each data}}
             {{#if this.devoured}}
-            <div class="burger">
+            <div style="margin: 7px; background-color:rgb(255, 255, 255); padding: 5px;">
                 <span>{{this.burger_name}}</span>
             </div>
             {{/if}}
             {{/each}}
         </div>
+    </div>
+    <div style="width: 100%; text-align:center; justify-content:center">
+    <input type="text" id="bg" name="name">
+    <button id="submit">Submit</button>
+    <p>Enter a burger you want to eat Click the "Submit" button.</p>
     </div>
 </div>

@@ -18,7 +18,7 @@ app.set("views", __dirname + "/views");
 app.set("view engine", "handlebars");
 app.engine("handlebars", exphbs({ defaultLayout: "main", layoutsDir:__dirname +  "/views/layouts",partialsDir:__dirname+"/views"}));
 
-require("./route/router")(app);
+require("./controllers/burgers_controllers")(app);
 
 
 
